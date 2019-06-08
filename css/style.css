@@ -9,6 +9,10 @@ h1, h2, h3, h4, h5, h6, p, ul, ol, dl, a {
   font-weight: 200;
 }
 
+li {
+  list-style: none;
+}
+
 html, body {
   height: 100%;
   width: 100%;
@@ -25,7 +29,7 @@ html, body {
   font-weight: 100;
   letter-spacing: 0.1em;
   position: relative;
-  margin-bottom: 110px;
+  margin-bottom: 100px;
 }
 
 .header .gnav {
@@ -91,6 +95,7 @@ html, body {
 
 .main {
   font-family: "Noto Sans JP";
+  margin-bottom: 100px;
 }
 
 .main .section {
@@ -102,6 +107,7 @@ html, body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  margin-bottom: 30px;
 }
 
 .main .section .left {
@@ -116,7 +122,7 @@ html, body {
   width: 770px;
 }
 
-.main .contents {
+.main .contents, .banner {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -127,20 +133,103 @@ html, body {
           justify-content: space-between;
 }
 
-.main .contents .category {
+.main .contents .category, .banner .category {
   width: 270px;
 }
 
-.main .contents .category h2 {
+.main .contents .category h2, .banner .category h2 {
   border-bottom: solid 1px black;
+  font-weight: bold;
 }
 
-.main .contents .category li {
-  list-style: none;
+.main .contents .category li, .banner .category li {
   border-bottom: solid 1px black;
+  margin: 18px auto;
+  padding-bottom: 18px;
 }
 
-.main .contents .content {
+.main .contents .category li div p, .banner .category li div p {
+  margin-bottom: 10px;
+}
+
+.main .contents .content, .banner .content {
   width: 870px;
+}
+
+.main .contents .content .new, .main .contents .content .sale, .banner .content .new, .banner .content .sale {
+  margin-bottom: 40px;
+}
+
+.main .contents .content h2, .banner .content h2 {
+  font-weight: bold;
+  margin-bottom: 15px;
+  border-bottom: solid 1px black;
+}
+
+.main .contents .content .slide div, .banner .content .slide div {
+  margin-right: -30px;
+  font-size: 12px;
+}
+
+.main .contents .content .slide div img, .main .contents .content .slide div dt, .banner .content .slide div img, .banner .content .slide div dt {
+  margin-bottom: 7px;
+  font-weight: bold;
+}
+
+.main .contents .content .slide div dd, .banner .content .slide div dd {
+  margin-left: 0;
+}
+
+.acd-check {
+  display: none;
+}
+
+.acd-label {
+  background: white;
+  color: black;
+  display: block;
+}
+
+.acd-content {
+  border: 1px solid white;
+  height: 0;
+  opacity: 0;
+  padding: 0 10px;
+  -webkit-transition: .4s;
+  transition: .4s;
+  visibility: hidden;
+}
+
+.acd-check:checked + .acd-label + .acd-content {
+  height: 60px;
+  opacity: 1;
+  padding: 10px;
+  visibility: visible;
+}
+
+.footer {
+  width: 100%;
+  height: 300px;
+  background-color: #eeeeed;
+}
+
+.footer .about {
+  width: 80%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 30px;
+  margin: auto;
+}
+
+.footer .about .left div {
+  margin-bottom: 30px;
+}
+
+.footer .about li {
+  margin-bottom: 15px;
 }
 /*# sourceMappingURL=style.css.map */

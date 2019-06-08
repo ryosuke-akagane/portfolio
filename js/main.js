@@ -6,6 +6,7 @@ $(function(){
         slidesToShow: 3,
         slidesToScroll: 1,
         arrows: false,
+        autoplay: true,
         responsive: [{
         breakpoint: 576,settings: {
         slidesToShow: 1,
